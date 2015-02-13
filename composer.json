@@ -1,0 +1,12 @@
+{
+	"name": "ahmadshah/support",
+	"description": "Support classes for Laravel 5 Project",
+	"require": {
+		"rhumsaa/uuid": "~2.8"
+	},
+	"autoload": {
+		"psr-4": {
+			"L5\\Support\\": "src"
+		}
+	}
+}

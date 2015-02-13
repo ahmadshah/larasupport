@@ -1,5 +1,5 @@
 {
-	"name": "ahmadshah/support",
+	"name": "ahmadshah/larasupport",
 	"description": "Support classes for Laravel 5 Project",
 	"license": "MIT",
 	"require": {

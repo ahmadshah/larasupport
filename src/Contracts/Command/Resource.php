@@ -6,58 +6,65 @@ use L5\Support\Contracts\Listener\ResourceRetriever;
 interface Resource
 {
     /**
-     * [index description]
-     * @param  ResourceRetriever $listener [description]
-     * @param  array             $data     [description]
-     * @return [type]                      [description]
+     * Process the GET request method to retrieve the collection
+     * 
+     * @param  \L5\Support\Contracts\Listener\ResourceRetriever $listener
+     * @param  array $data     [description]
+     * @return mixed
      */
     public function index(ResourceRetriever $listener, array $data = []);
 
     /**
-     * [show description]
-     * @param  ResourceRetriever $listener   [description]
-     * @param  [type]            $resourceId [description]
-     * @return [type]                        [description]
+     * Process the GET request method to retrieve a single item
+     * 
+     * @param  \L5\Support\Contracts\Listener\ResourceRetriever $listener
+     * @param  integer|string $resourceId
+     * @return mixed
      */
     public function show(ResourceRetriever $listener, $resourceId);
 
     /**
-     * [create description]
-     * @param  ResourceCreator $listener [description]
-     * @return [type]                    [description]
+     * Process the GET request method to create a new resource
+     * 
+     * @param  \L5\Support\Contracts\Listener\ResourceCreator $listener
+     * @return mixed
      */
     public function create(ResourceCreator $listener);
 
     /**
-     * [store description]
-     * @param  ResourceCreator $listener [description]
-     * @param  array           $inputs   [description]
-     * @return [type]                    [description]
+     * Process the POST request method to create a new resource
+     * 
+     * @param  \L5\Support\Contracts\Listener\ResourceCreator $listener
+     * @param  array $inputs
+     * @return mixed
      */
     public function store(ResourceCreator $listener, array $inputs);
 
     /**
-     * [edit description]
-     * @param  ResourceCreator $listener   [description]
-     * @param  [type]          $resourceId [description]
-     * @return [type]                      [description]
+     * Process the GET request method to update an existing resource
+     * 
+     * @param  \L5\Support\Contracts\Listener\ResourceCreator $listener
+     * @param  integer|string $resourceId
+     * @return mixed
      */
     public function edit(ResourceCreator $listener, $resourceId);
 
     /**
-     * [update description]
-     * @param  ResourceCreator $listener   [description]
-     * @param  [type]          $resourceId [description]
-     * @param  array           $inputs     [description]
-     * @return [type]                      [description]
+     * Process the PATCH or PUT request method to update an existing resource
+     * 
+     * @param  \L5\Support\Contracts\Listener\ResourceCreator $listener
+     * @param  integer|string $resourceId
+     * @param  array $inputs
+     * @return mixed
      */
     public function update(ResourceCreator $listener, $resourceId, array $inputs);
 
     /**
-     * [destroy description]
-     * @param  ResourceCreator $listener   [description]
-     * @param  [type]          $resourceId [description]
-     * @return [type]                      [description]
+     * Process the DELETE request method to remove an existing resource
+     * 
+     * @param  \L5\Support\Contracts\Listener\ResourceCreator $listener
+     * @param  integer|string $resourceId
+     * @return mixed
      */
     public function destroy(ResourceCreator $listener, $resourceId);
 }

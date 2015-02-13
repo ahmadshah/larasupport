@@ -1,6 +1,7 @@
 {
 	"name": "ahmadshah/support",
 	"description": "Support classes for Laravel 5 Project",
+	"license": "MIT",
 	"require": {
 		"rhumsaa/uuid": "~2.8"
 	},
@@ -8,5 +9,11 @@
 		"psr-4": {
 			"L5\\Support\\": "src"
 		}
-	}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "0.1-dev"
+		}
+	},
+	"minimum-stability": "dev"
 }

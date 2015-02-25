@@ -126,4 +126,5 @@ trait FractalResponseTrait
     protected function throwInternalServerError($message = 'Internal server error')
     {
         return $this->setStatusCode(500)->respondWithError($message);
+    }
 }

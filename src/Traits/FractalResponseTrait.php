@@ -39,9 +39,7 @@ trait FractalResponseTrait
      */
     protected function respondWithCollection($resources, TransformerAbstract $transformer)
     {
-        $collection = app('league.fractal')->createData(new Collection($resources, $transformer))
-            ->toArray();
-
+        $collection = new Collection($resources, $transformer);
         $response = app('league.fractal')->createData($collection)->toArray();
 
         return $this->respondInJson($response);
@@ -57,7 +55,6 @@ trait FractalResponseTrait
     protected function respondWithItem($resource, TransformerAbstract $transformer)
     {
         $item = new Item($resource, $transformer);
-
         $response = app('league.fractal')->createData($item)->toArray();
 
         return $this->respondInJson($response);
